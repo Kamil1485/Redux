@@ -14,10 +14,8 @@ function App(props) {
   const [editMode, setEditMode] = useState(false);
   const [editItemId, setEditItemId] = useState(0);
   const handleUpdate = (id, baslik) => {
-    // find the list item with the given title
     const selectedItem = props.liste.filter((list) => list.id === id)[0];
     console.log(selectedItem);
-    // update the state with the id of the selected item
     setInputValue("");
     setEditItemId(selectedItem.id);
     setEditMode(true);
